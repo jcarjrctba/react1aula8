@@ -38,6 +38,8 @@ const Login = () => {
     },
   ]);
 
+  console.log("Linha 46");
+
   return (
     <div className="container">
       <div className="box">
