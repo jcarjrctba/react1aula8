@@ -14,13 +14,15 @@ const Home = () => {
     navigate("/");
   };
 
-  localStorage.setItem("Contador", "Ola");
-
-  const text = localStorage.getItem("Contador");
-
   useEffect(() => {
-    return () => localStorage.clear();
+    localStorage.setItem("altera", "Alterado o estado do contador");
+
+    return () => {
+      localStorage.clear();
+    };
   }, [contador]);
+
+  const text = localStorage.getItem("altera");
 
   return (
     <div className="container">
